@@ -38,13 +38,7 @@ public class InputControll
      
     }
 
-    //public void UndoButton(string buttonId)
-    //{
-    //    if (_commands.ContainsKey(buttonId))
-    //    {
-    //        _commands[buttonId].Undo();
-    //    }
-    //}
+
 
     //назначить ключ в словарь к интерфейсу без всяких проверок
     //тут если ключ не существует он будет добавлен в словарь

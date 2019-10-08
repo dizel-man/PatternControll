@@ -7,14 +7,5 @@ public class SoundCommand : ICommand
         Debug.Log("This is SoundCommand ");
     }
 
-    public void Undo()
-    {
-
-    }
-
-    //public override string ToString()
-    //{
-    //    // return base.ToString();
-    //    return "sound on";
-    //}
+  
 }
