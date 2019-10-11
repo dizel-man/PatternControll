@@ -5,11 +5,11 @@ public class TvWidget : IObserver
     private string _tv;
     private ISubject _subject;
 
-    //регистрация самого себя в агрегаторе
+    // конструктор для того чтобы в нем был сохранен нужный нам ISubject
     public TvWidget(ISubject subject)
     {
         _subject = subject;
-        subject.RegistrObserver(this);
+        subject.RegistrObserver(this); //регистрация
     }
 
     public void UpdateNews(string twitter, string lenta, string tv)
@@ -25,6 +25,6 @@ public class TvWidget : IObserver
 
     public void RemoveFromSubject()
     {
-        _subject.RemoveObserver(this);
+        _subject.RemoveObserver(this);//удаление
     }
 }

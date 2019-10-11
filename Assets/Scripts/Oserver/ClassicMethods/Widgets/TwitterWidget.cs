@@ -3,14 +3,15 @@
 public class TwitterWidget : IObserver
 {
     private string _twitter;
+
     private ISubject _subject;
 
 
-    //регистрация самого себя в агрегаторе
+    // конструктор для того чтобы в нем был сохранен нужный нам ISubject
     public TwitterWidget(ISubject subject)
     {
         _subject = subject;
-        subject.RegistrObserver(this);
+        subject.RegistrObserver(this); //регистрация
     }
 
     public void UpdateNews(string twitter, string lenta, string tv)
@@ -27,6 +28,6 @@ public class TwitterWidget : IObserver
 
     public void RemoveFromSubject()
     {
-        _subject.RemoveObserver(this);
+        _subject.RemoveObserver(this);//удаление
     }
 }

@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 959817741}
   - component: {fileID: 959817740}
+  - component: {fileID: 959817742}
   m_Layer: 0
   m_Name: Runner
   m_TagString: Untagged
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959817739}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6178cd0f24aeb4418beee7856a7cfaf, type: 3}
   m_Name: 
@@ -163,6 +164,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &959817742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959817739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046a152603c8f6844949d8be3e756823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1272061310
 GameObject:
   m_ObjectHideFlags: 0

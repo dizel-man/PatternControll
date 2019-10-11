@@ -5,7 +5,6 @@ using UnityEngine;
 public class RunObserver : MonoBehaviour
 {
     NewsAgregator newsAggregator;
-
     TwitterWidget twitterWidget;
     LentaWidget lentaWidget;
     TvWidget tvWidget;
@@ -18,11 +17,12 @@ public class RunObserver : MonoBehaviour
         lentaWidget = new LentaWidget(newsAggregator);
         tvWidget = new TvWidget(newsAggregator);
 
-        newsAggregator.NeNewsAvalable();
+        
+        newsAggregator.NeNewsAvalable();// оповещение
 
-        twitterWidget.RemoveFromSubject();
+        twitterWidget.RemoveFromSubject();// удаление из оповещаемых
 
-        newsAggregator.NeNewsAvalable();
+        newsAggregator.NeNewsAvalable();// оповещение
 
     }
 
