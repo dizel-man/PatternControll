@@ -4,31 +4,34 @@ public class RussianVolswagenFacility : VolswagenFacility
 {
     public override Car CreateCar(string type)
     {
-        Car car = new Car();
+        Car car;
+        CarPartsFactory factory = new RussianCarPartsFactory();
 
         switch (type)
         {
             case "Golf":
-                car = new RussianGolf();
-                break;
+                car = new Golf(factory);
+                return car;
 
             case "Passat":
-                car = new RussianPassat();
-                break;
+                car = new Passat(factory);
+                return car;
+               
 
             case "Tiguan":
-                car = new RussianTiguan();
-                break;
+                car = new Tiguan(factory);
+                return car;
+               
 
             case "Tuareg":
-                car = new RussianTuareg();
-                break;
+                car = new Tuareg(factory);
+                return car;
 
 
             default:
                 break;
         }
 
-        return car;
+      return null;
     }
 }

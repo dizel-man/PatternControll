@@ -1,21 +1,17 @@
 ﻿using UnityEngine;
 
-public class Car 
+public abstract class Car 
 {
     protected string Name = "";
-    protected string Engine = "Diesel";
-    protected string PaintColor = "White";
-    protected string Wheels = "16 inch";
     protected string Body = "Caravan";
 
-    public void Configure()
-    {
-        Debug.Log("Создаём:" + Name);
-        Debug.Log("Двигатель:" + Engine);
-        Debug.Log("Кузов:" + Body);
-        Debug.Log("Цвет:" + PaintColor);
-        Debug.Log("Колеса:" + Wheels);
-    }
+    protected Engine Engine;
+    protected Paint PaintColor;
+    protected Wheels Wheels;
+
+
+    public abstract void Configure();
+    
 
     public void AssembleBody()
     {

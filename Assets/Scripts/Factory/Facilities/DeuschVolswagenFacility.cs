@@ -4,30 +4,34 @@ public class DeuschVolswagenFacility : VolswagenFacility
 {
     public override Car CreateCar(string type)
     {
-        Car car = new Car();
+        Car car;
+        CarPartsFactory factory = new DeuschCarPartsFactory();
 
         switch (type)
         {
             case "Golf":
-                car = new DeuschGolf();
-                break;
+                car = new Golf(factory);
+                return car;
 
             case "Passat":
-                car = new DeuschPassat();
-                break;
+                car = new Passat(factory);
+                return car;
+
 
             case "Tiguan":
-                car = new DeuschTiguan();
-                break;
+                car = new Tiguan(factory);
+                return car;
+
 
             case "Tuareg":
-                car = new DeuschTuareg();
-                break;
+                car = new Tuareg(factory);
+                return car;
+
 
             default:
                 break;
         }
 
-        return car;
+        return null;
     }
 }

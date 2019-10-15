@@ -15,6 +15,7 @@ public class RunFactory : MonoBehaviour
         DeuschFacility = new DeuschVolswagenFacility();
 
         RussianFacility.GetCar("Golf");
+       
         DeuschFacility.GetCar("Tiguan");
     }
 
