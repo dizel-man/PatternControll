@@ -1,8 +1,15 @@
 ﻿using UnityEngine;
-public class GasolineEngine : Engine
+
+
+namespace Factory
 {
-    public GasolineEngine()
+    public class GasolineEngine : Engine
     {
-        Debug.Log("Engine is gasoline");
+        public GasolineEngine()
+        {
+            Debug.Log("Engine is gasoline");
+        }
     }
+
 }
+

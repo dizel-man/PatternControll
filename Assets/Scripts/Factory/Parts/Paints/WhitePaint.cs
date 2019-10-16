@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 
-public class WhitePaint : Paint
+namespace Factory
 {
-    public WhitePaint()
+
+    public class WhitePaint : Paint
     {
-        Debug.Log("Paint is white");
+        public WhitePaint()
+        {
+            Debug.Log("Paint is white");
+        }
     }
+
 }

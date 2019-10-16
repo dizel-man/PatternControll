@@ -2,22 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RunFactory : MonoBehaviour
+
+namespace Factory
 {
 
-    VolswagenFacility RussianFacility;
-    VolswagenFacility DeuschFacility;
-
-    void Start()
+    public class RunFactory : MonoBehaviour
     {
 
-        RussianFacility = new RussianVolswagenFacility();
-        DeuschFacility = new DeuschVolswagenFacility();
+        VolswagenFacility RussianFacility;
+        VolswagenFacility DeuschFacility;
 
-        RussianFacility.GetCar("Golf");
-       
-        DeuschFacility.GetCar("Tiguan");
+        void Start()
+        {
+
+            RussianFacility = new RussianVolswagenFacility();
+            DeuschFacility = new DeuschVolswagenFacility();
+
+            RussianFacility.GetCar("Golf");
+
+            DeuschFacility.GetCar("Tiguan");
+        }
+
+
     }
 
-    
 }

@@ -1,24 +1,28 @@
 ﻿using UnityEngine;
 
-public class Tiguan : Car
+namespace Factory
 {
-    private CarPartsFactory _factory;
-
-    public Tiguan(CarPartsFactory factory)
+    public class Tiguan : Car
     {
-        _factory = factory;
-        Name = "Tiguan";
-        Body = "Crossover";
+        private CarPartsFactory _factory;
 
+        public Tiguan(CarPartsFactory factory)
+        {
+            _factory = factory;
+            Name = "Tiguan";
+            Body = "Crossover";
+
+        }
+
+        public override void Configure()
+        {
+            Debug.Log("Name: " + Name);
+            Debug.Log("Body: " + Body);
+
+            Engine = _factory.CreateEngine();
+            PaintColor = _factory.CreatePaints();
+            Wheels = _factory.CreateWheels();
+        }
     }
 
-    public override void Configure()
-    {
-        Debug.Log("Name: " + Name);
-        Debug.Log("Body: " + Body);
-
-        Engine = _factory.CreateEngine();
-        PaintColor = _factory.CreatePaints();
-        Wheels = _factory.CreateWheels();
-    }
 }

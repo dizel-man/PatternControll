@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 
-public class BigWheels : Wheels
+namespace Factory
 {
-    public BigWheels()
+    public class BigWheels : Wheels
     {
-        Debug.Log(" BigWheels ");
+        public BigWheels()
+        {
+            Debug.Log(" BigWheels ");
+        }
+
     }
-   
+
 }
+

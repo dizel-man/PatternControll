@@ -1,10 +1,15 @@
 ﻿
 using UnityEngine;
 
-public class MediumWheels : Wheels
+namespace Factory
 {
-    public MediumWheels()
+    public class MediumWheels : Wheels
     {
-        Debug.Log(" MediumWheels ");
+        public MediumWheels()
+        {
+            Debug.Log(" MediumWheels ");
+        }
     }
 }
+
+

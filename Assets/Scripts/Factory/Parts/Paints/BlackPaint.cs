@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 
-public class BlackPaint : Paint
+namespace Factory
 {
-    public BlackPaint()
+    public class BlackPaint : Paint
     {
-        Debug.Log("Paint is black");
+        public BlackPaint()
+        {
+            Debug.Log("Paint is black");
+        }
     }
+
+
 }
 

@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 
-public abstract class CarPartsFactory 
+
+namespace Factory
 {
-    public abstract Engine CreateEngine();
-    public abstract Paint CreatePaints();
-    public abstract Wheels CreateWheels();
+    public abstract class CarPartsFactory
+    {
+        public abstract Engine CreateEngine();
+        public abstract Paint CreatePaints();
+        public abstract Wheels CreateWheels();
+    }
+
 }
+

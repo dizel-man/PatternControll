@@ -1,24 +1,30 @@
 ﻿using UnityEngine;
 
-public class Tuareg : Car
+namespace Factory
 {
-    private CarPartsFactory _factory;
-
-    public Tuareg(CarPartsFactory factory)
+    public class Tuareg : Car
     {
-        _factory = factory;
+        private CarPartsFactory _factory;
 
-        Name = "Tuareg";
-        Body = "Jeep";
+        public Tuareg(CarPartsFactory factory)
+        {
+            _factory = factory;
+
+            Name = "Tuareg";
+            Body = "Jeep";
+        }
+
+        public override void Configure()
+        {
+            Debug.Log("Name: " + Name);
+            Debug.Log("Body: " + Body);
+
+            Engine = _factory.CreateEngine();
+            PaintColor = _factory.CreatePaints();
+            Wheels = _factory.CreateWheels();
+        }
     }
 
-    public override void Configure()
-    {
-        Debug.Log("Name: " + Name);
-        Debug.Log("Body: " + Body);
-
-        Engine = _factory.CreateEngine();
-        PaintColor = _factory.CreatePaints();
-        Wheels = _factory.CreateWheels();
-    }
 }
+
+

@@ -1,37 +1,43 @@
 ﻿using UnityEngine;
 //здесь вынесены способы получения конкретных типов авто
-public class DeuschVolswagenFacility : VolswagenFacility
+
+
+namespace Factory
 {
-    public override Car CreateCar(string type)
+
+    public class DeuschVolswagenFacility : VolswagenFacility
     {
-        Car car;
-        CarPartsFactory factory = new DeuschCarPartsFactory();
-
-        switch (type)
+        public override Car CreateCar(string type)
         {
-            case "Golf":
-                car = new Golf(factory);
-                return car;
+            Car car;
+            CarPartsFactory factory = new DeuschCarPartsFactory();
 
-            case "Passat":
-                car = new Passat(factory);
-                return car;
+            switch (type)
+            {
+                case "Golf":
+                    car = new Golf(factory);
+                    return car;
 
-
-            case "Tiguan":
-                car = new Tiguan(factory);
-                return car;
-
-
-            case "Tuareg":
-                car = new Tuareg(factory);
-                return car;
+                case "Passat":
+                    car = new Passat(factory);
+                    return car;
 
 
-            default:
-                break;
+                case "Tiguan":
+                    car = new Tiguan(factory);
+                    return car;
+
+
+                case "Tuareg":
+                    car = new Tuareg(factory);
+                    return car;
+
+
+                default:
+                    break;
+            }
+
+            return null;
         }
-
-        return null;
     }
 }

@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 //abstract
-public abstract class Paint
+
+
+namespace Factory
 {
-    
+
+    public abstract class Paint
+    {
+
+    }
+
 }

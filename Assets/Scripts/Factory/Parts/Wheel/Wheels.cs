@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 //abstract
-public abstract class Wheels 
+
+
+namespace Factory
 {
-    
+    public abstract class Wheels
+    {
+
+    }
+
 }
+

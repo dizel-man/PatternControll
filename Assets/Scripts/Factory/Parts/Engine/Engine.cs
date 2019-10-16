@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 //abstract
-public abstract class Engine
+
+
+namespace Factory
 {
-   
+    public abstract class Engine
+    {
+
+    }
+
 }
+

@@ -1,36 +1,41 @@
 ﻿using UnityEngine;
 
-public abstract class Car 
+namespace Factory
 {
-    protected string Name = "";
-    protected string Body = "Caravan";
-
-    protected Engine Engine;
-    protected Paint PaintColor;
-    protected Wheels Wheels;
-
-
-    public abstract void Configure();
-    
-
-    public void AssembleBody()
+    public abstract class Car
     {
-        Debug.Log("Кузов установлен");
-    }
+        protected string Name = "";
+        protected string Body = "Caravan";
 
-    public void InstallEngene()
-    {
-        Debug.Log("Двигатель установлен");
-    }
+        protected Engine Engine;
+        protected Paint PaintColor;
+        protected Wheels Wheels;
 
-    public void Paint()
-    {
-        Debug.Log("Покрашено");
-    }
 
-    public void InstallWheels()
-    {
-        Debug.Log("Калеса установлены");
+        public abstract void Configure();
+
+
+        public void AssembleBody()
+        {
+            Debug.Log("Кузов установлен");
+        }
+
+        public void InstallEngene()
+        {
+            Debug.Log("Двигатель установлен");
+        }
+
+        public void Paint()
+        {
+            Debug.Log("Покрашено");
+        }
+
+        public void InstallWheels()
+        {
+            Debug.Log("Калеса установлены");
+        }
+
     }
 
 }
+

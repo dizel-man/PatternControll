@@ -1,25 +1,30 @@
 ﻿
 using UnityEngine;
 
-public class Passat : Car
+namespace Factory
 {
-    private CarPartsFactory _factory;
 
-    public Passat(CarPartsFactory factory)
+    public class Passat : Car
     {
-        _factory = factory;
-        Name = "Passat";
-        Body = "Sedan";
+        private CarPartsFactory _factory;
 
+        public Passat(CarPartsFactory factory)
+        {
+            _factory = factory;
+            Name = "Passat";
+            Body = "Sedan";
+
+        }
+
+        public override void Configure()
+        {
+            Debug.Log("Name: " + Name);
+            Debug.Log("Body: " + Body);
+
+            Engine = _factory.CreateEngine();
+            PaintColor = _factory.CreatePaints();
+            Wheels = _factory.CreateWheels();
+        }
     }
 
-    public override void Configure()
-    {
-        Debug.Log("Name: " + Name);
-        Debug.Log("Body: " + Body);
-
-        Engine = _factory.CreateEngine();
-        PaintColor = _factory.CreatePaints();
-        Wheels = _factory.CreateWheels();
-    }
 }
