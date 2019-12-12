@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Fac
 {
-    abstract class Creator
+    abstract class Factory
     {
         public abstract Product FactoryMethod();
     }

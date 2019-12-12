@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Fac
 {
-
+   
     class ConcreteProductB : Product
     {
-        public override void Make()
+        public override GameObject GetObject(GameObject go)
         {
-            Debug.Log("make prod B");
+            return Instantiate(go);
         }
     }
 

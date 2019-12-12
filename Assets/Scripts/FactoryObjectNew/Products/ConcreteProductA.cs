@@ -5,13 +5,16 @@ using System;
 
 namespace Fac
 {
-
+    
     class ConcreteProductA : Product
     {
-        public override void Make()
+   
+        public override GameObject GetObject(GameObject go)
         {
-            Debug.Log("make prod A");
+            return Instantiate(go);
         }
+
+
     }
 
 }

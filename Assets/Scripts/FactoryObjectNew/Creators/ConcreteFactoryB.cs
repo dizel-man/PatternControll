@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Fac
 {
-    class ConcreteCreatorB : Creator
+    class ConcreteFactoryB : Factory
     {
         public override Product FactoryMethod()
         {

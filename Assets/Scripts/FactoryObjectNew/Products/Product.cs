@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace Fac
 {
-    
-    abstract class Product 
+
+    abstract class Product : ScriptableObject
     {
-        public abstract void Make();
+        public abstract GameObject GetObject(GameObject go);
     }
 
 }
