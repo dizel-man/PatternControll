@@ -11,6 +11,7 @@ public class MainScreen : MonoBehaviour , IMainScreen
         // View.Show();
 
         Debug.Log("this is MainScreen Show Method");
+        Instantiate(Resources.Load("2/ScreenTest") as GameObject);
     }
 
     public void Hide()

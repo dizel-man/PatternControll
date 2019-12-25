@@ -9,6 +9,7 @@ public class CompositionRoot : MonoBehaviour
 
     // e t c 
 
+    // создаем новый GameObject и вешаем на него компанент MainScreen
     public static IMainScreen GetMainScreen()
     {
         if (MainScreen == null)
@@ -19,7 +20,7 @@ public class CompositionRoot : MonoBehaviour
         return MainScreen;
     }
 
-
+    // создаем новый GameObject и вешаем на него компанент Player
     public static IPlayer GetPlayer()
     {
         if (Player == null)
